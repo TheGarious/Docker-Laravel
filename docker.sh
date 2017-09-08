@@ -1,6 +1,6 @@
 #/bin/bash
 
-export PROJECT_NAME="epitech"
+export PROJECT_NAME="project"
 export DOCKER_NAME="$PROJECT_NAME"
 #export CONTAINER_PATH="$(readlink -f $(dirname $0))"
 export CONTAINER_PATH="./" # for mac readlink not exist

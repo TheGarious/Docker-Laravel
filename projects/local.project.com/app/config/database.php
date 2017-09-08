@@ -55,7 +55,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'db',
-			'database'  => 'epitech',
+			'database'  => 'project',
 			'username'  => 'root',
 			'password'  => 'root',
 			'charset'   => 'utf8',
