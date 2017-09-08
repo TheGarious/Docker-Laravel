@@ -18,7 +18,7 @@ services:
             - ./.volumes/mysql:/var/lib/mysql
         environment:
             MYSQL_ROOT_PASSWORD: root
-            MYSQL_DATABASE: swabbl
+            MYSQL_DATABASE: epitech
             MYSQL_USER: symfony
             MYSQL_PASSWORD: symfony
     
