@@ -1,31 +1,20 @@
 server {
-    
+
     listen 80;
-    
+
     server_name ${PROJECT};
     root /home/dev/projects/${PROJECT}/public;
-    
+
     index index.php index.html index.htm;
 
     location / {
         try_files $uri $uri/ /index.php?$query_string;
     }
 
-   location ~ ^/(index)\.php(/|$) {
-        try_files $uri /index.php =404;
-        fastcgi_split_path_info ^(.+\.php)(/.+)$;
-        fastcgi_pass unix:/var/run/php7-fpm.sock;
-        fastcgi_index index.php;
-        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-        include fastcgi_params;
-   }
-
-
    location ~ \.php$ {
-
-    ]
-
-
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass php:9000;
+    }
 
     error_log /var/log/nginx/${PROJECT}.error.log;
     access_log /var/log/nginx/${PROJECT}.access.log;
